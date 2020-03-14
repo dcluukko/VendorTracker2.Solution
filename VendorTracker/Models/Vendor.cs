@@ -29,7 +29,7 @@ namespace VendorTracker.Models
 
     public static Vendor Find(int id)
     {
-      return _test[id-1];
+      return _vendors[id-1];
     }
   }
 }

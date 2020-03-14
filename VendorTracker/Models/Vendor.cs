@@ -8,6 +8,7 @@ namespace VendorTracker.Models
    public static List<Vendor> _vendors = new List<Vendor> { };
    public string Name { get; set; }
    public int Id { get; }
+   public static List<Vendor> _test = new List<Vendor> { };
   
     public Vendor(string name)
     {
@@ -19,6 +20,11 @@ namespace VendorTracker.Models
       public static void ClearAll()
     {
       _vendors.Clear();
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _test;
     }
   }
 }

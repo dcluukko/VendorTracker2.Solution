@@ -23,5 +23,6 @@ namespace VendorTracker.Models
       //Assert
       Assert.AreEqual(1, compare);
     }
+  
   }
 }

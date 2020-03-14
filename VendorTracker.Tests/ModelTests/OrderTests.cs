@@ -23,6 +23,20 @@ namespace VendorTracker.Models
       //Assert
       Assert.AreEqual(1, compare);
     }
-  
+    [TestMethod]
+    public void GetAll_ReturnsAllOrderObjects_OrderList()
+    {
+      //Arrange
+      Order newOrder1 = new Order("string1");
+      Order newOrder2 = new Order("string2");
+
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      //Act
+      List<Order> compareList = Order.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, compareList);
+    }
   }
 }

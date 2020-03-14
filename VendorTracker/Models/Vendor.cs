@@ -8,7 +8,8 @@ namespace VendorTracker.Models
    public static List<Vendor> _vendors = new List<Vendor> { };
    public string Name { get; set; }
    public int Id { get; }
-   public static List<Vendor> _test = new List<Vendor> { };
+   public static List<Order> _test { get; set; }
+   public static List<Order> Orders { get; set; }
   
     public Vendor(string name)
     {
@@ -31,5 +32,10 @@ namespace VendorTracker.Models
     {
       return _vendors[id-1];
     }
+
+    // public void AddOrder(Order Orders)
+    // {
+    //   Vendor.Add(Orders);
+    // }
   }
 }

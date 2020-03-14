@@ -13,5 +13,15 @@ namespace VendorTracker.Models
       Order newOrder = new Order(1,2);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     } 
+    [TestMethod]
+    public void GetId_ReturnId_Int()
+    {
+      //Arrange
+      Vendor newVendor = new Vendor("");
+      //Act
+      int compare = newVendor.Id;
+      //Assert
+      Assert.AreEqual(1, compare);
+    }
   }
 }

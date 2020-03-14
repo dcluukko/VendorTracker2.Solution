@@ -42,5 +42,19 @@ namespace VendorTracker.Models
       //Assert
       CollectionAssert.AreEqual(newList, compareList);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrderWithId_Order()
+    {
+      //Arrange
+      Order newOrder1 = new Order(1, 2);
+      Order newOrder2 = new Order(1, 2);
+
+      //Act
+      Order compare = Order.Find(3);
+
+      //Assert
+      Assert.AreEqual(newOrder1, compare);
+    }
   }
 }

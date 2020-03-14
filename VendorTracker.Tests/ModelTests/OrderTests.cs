@@ -5,7 +5,7 @@ using System;
 
 namespace VendorTracker.Models
 {
-  public class VendorTest
+  public class OrderTest
   {
       [TestMethod]
     public void OrderConstructor_CreatesInstanceofOrder_Order()
@@ -27,8 +27,8 @@ namespace VendorTracker.Models
     public void GetAll_ReturnsAllOrderObjects_OrderList()
     {
       //Arrange
-      Order newOrder1 = new Order("string1");
-      Order newOrder2 = new Order("string2");
+      Order newOrder1 = new Order(1, 2);
+      Order newOrder2 = new Order(1, 2);
 
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 

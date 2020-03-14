@@ -13,7 +13,7 @@ namespace VendorTracker.Models
       Bread = bread;
       Pastry = pastry;
       _orders.Add(this);
-      Id = _orders.Count
+      Id = _orders.Count;
     }
   }
 }

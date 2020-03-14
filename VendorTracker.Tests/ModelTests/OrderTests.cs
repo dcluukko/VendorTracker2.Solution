@@ -17,9 +17,9 @@ namespace VendorTracker.Models
     public void GetId_ReturnId_Int()
     {
       //Arrange
-      Vendor newVendor = new Vendor("");
+      Order newOrder = new Order("");
       //Act
-      int compare = newVendor.Id;
+      int compare = newOrder.Id;
       //Assert
       Assert.AreEqual(1, compare);
     }

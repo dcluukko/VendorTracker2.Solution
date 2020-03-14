@@ -10,7 +10,7 @@ namespace VendorTracker.Models
       [TestMethod]
     public void OrderConstructor_CreatesInstanceofOrder_Order()
     {
-      Order newOrder = new Order("test");
+      Order newOrder = new Order(1,2);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     } 
   }

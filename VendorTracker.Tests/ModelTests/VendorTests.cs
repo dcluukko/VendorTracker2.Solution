@@ -65,7 +65,7 @@ namespace VendorTracker.TestTools
       Vendor newVendor2 = new Vendor("string2");
 
       //Act
-      Vendor compare = Vendor.Find(2);
+      Vendor compare = Vendor.Find(1);
 
       //Assert
       Assert.AreEqual(newVendor1, compare);

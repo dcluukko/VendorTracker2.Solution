@@ -57,5 +57,18 @@ namespace VendorTracker.TestTools
       //Assert
       CollectionAssert.AreEqual(newList, compareList);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendorWithId_Vendor()
+    {
+      //Arrange
+      Vendor newVendor1 = new Vendor("string1");
+      Vendor newVendor2 = new Vendor("string2");
+
+      //Act
+      Vendor compare = Vendor.Find(1);
+
+      //Assert
+      Assert.AreEqual(newVendor1, compare);
+    }
   }
 }

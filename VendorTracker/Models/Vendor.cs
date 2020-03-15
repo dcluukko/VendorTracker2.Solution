@@ -5,17 +5,17 @@ namespace VendorTracker.Models
 {
  public class Vendor
   {
-   public static List<Vendor> _vendors = new List<Vendor> { };
+   private static List<Vendor> _vendors = new List<Vendor> { };
    public string Name { get; set; }
    public int Id { get; }
-   public static List<Order> _test { get; set; }
-   public static List<Order> Orders { get; set; }
-  
-    public Vendor(string name)
+   public List<Order> Orders { get; set; }
+    public List<Order> Test { get; set; }
+    public Vendor(string vendorType)
     {
-    Name = name;
+    Name = vendorType;
     _vendors.Add(this);
     Id = _vendors.Count;
+    Orders = new List<Order> { };
 
     }
       public static void ClearAll()
@@ -33,9 +33,9 @@ namespace VendorTracker.Models
       return _vendors[id-1];
     }
 
-    // public void AddOrder(Order Orders)
-    // {
-    //   Vendor.Add(Orders);
-    // }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }

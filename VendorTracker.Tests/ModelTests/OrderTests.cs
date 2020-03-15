@@ -3,15 +3,16 @@ using VendorTracker.Models;
 using System.Collections.Generic;
 using System;
 
-namespace VendorTracker.Models
+namespace VendorTracker.TestTools
 {
+  [TestClass]
   public class OrderTest : IDisposable
   {
     public void Dispose()
     {
       Order.ClearAll();
     }
-      [TestMethod]
+    [TestMethod]
     public void OrderConstructor_CreatesInstanceofOrder_Order()
     {
       Order newOrder = new Order(1,2);
@@ -51,10 +52,10 @@ namespace VendorTracker.Models
       Order newOrder2 = new Order(1, 2);
 
       //Act
-      Order compare = Order.Find(3);
+      Order compare = Order.Find(1);
 
       //Assert
       Assert.AreEqual(newOrder1, compare);
     }
   }
-}
+} 

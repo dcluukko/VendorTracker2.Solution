@@ -12,7 +12,6 @@ namespace VendorTracker.TestTools
     {
       Vendor.ClearAll();
     }
-
     [TestMethod]
     public void VendorConstructor_CreatesInstanceofVendor_Vendor()
     {
@@ -36,7 +35,7 @@ namespace VendorTracker.TestTools
     public void GetId_ReturnId_Int()
     {
       //Arrange
-      Vendor newVendor = new Vendor("");
+      Vendor newVendor = new Vendor("test");
       //Act
       int compare = newVendor.Id;
       //Assert
@@ -70,21 +69,21 @@ namespace VendorTracker.TestTools
       //Assert
       Assert.AreEqual(newVendor1, compare);
     }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      Order newOrder = new Order(1,2);
+      List<Order> newList = new List<Order> { newOrder };
+      Vendor newVendor = new Vendor("title");
+      newVendor.AddOrder(newOrder);
+      //Act
 
-    // [TestMethod]
-    // public void AddOrder_AssociatesOrderWithVendor_OrderList()
-    // {
-    //   //Arrange
-    //   Order newOrder = new Order(1,2);
-    //   List<Order> newList = new List<Order> { newOrder };
-    //   Vendor newVendor = new Vendor("name");
-    //   newVendor.AddOrder(newOrder);
-      
-    //   //Act
-    //   List<Vendor> compare = newVendor.Orders;
+      List<Order> result = newVendor.Orders;
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, compare);
-    // }
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+    
   }
 }
